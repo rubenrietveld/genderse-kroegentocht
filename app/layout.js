@@ -15,24 +15,27 @@ const bodyFont = Inter({
 })
 
 export const metadata = {
-  metadataBase: new URL("https://genderse-kroegentocht.vercel.app/"),
   title: "Genderse Biercantus 2026",
-  description: "De gezelligste Biercantus van Genderen.",
+  description:
+    "De gezelligste Biercantus van Genderen. Zing, drink en beleef een onvergetelijke avond!",
   openGraph: {
     title: "Genderse Biercantus 2026 🍻",
-    description: "Vrijdag 29 mei in het Dorpshuis Genderen.",
+    description:
+      "Vrijdag 29 mei in het Dorpshuis Genderen. Vol = vol!",
+    url: "https://genderse-kroegentocht.vercel.app/",
+    siteName: "Genderse Biercantus",
     images: [
       {
-        url: "/images/og-image.jpg", // ← dit is nu correct
+        url: "https://genderse-kroegentocht.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
       },
     ],
-    type: "website",
     locale: "nl_NL",
+    type: "website",
   },
 };
-};
+
 
 export default function RootLayout({ children }) {
   return (
