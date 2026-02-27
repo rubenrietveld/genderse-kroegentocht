@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "biercantus-2026",
+    "title": "Biercantus 2026",
+    "date": "29 mei 2026",
+    "time": "20:30 - 00:00",
+    "location": "Dorpshuis Genderen",
+    "price": 15,
+    "capacity": 120,
+    "soldOut": false,
+    "description": "Een avond vol zang, gezelligheid en bier.",
+    "longDescription": "Tijdens de biercantus zingen we samen bekende nummers onder leiding van een cantusleider. Verwacht gezelligheid, humor en volle bierpullen.",
+    "signupUrl": "https://forms.gle/jouwlink"
+  }
+]
