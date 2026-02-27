@@ -6,8 +6,8 @@
     "time": "20:30 - 00:00",
     "location": "Dorpshuis Genderen",
     "price": 15,
-    "capacity": 120,
-    "soldOut": false,
+    "capacity": 200,
+    "soldOut": true,
     "description": "Een avond vol zang, gezelligheid en bier.",
     "longDescription": "Tijdens de biercantus zingen we samen bekende nummers onder leiding van een cantusleider. Verwacht gezelligheid, humor en volle bierpullen.",
     "signupUrl": "https://forms.gle/jouwlink"

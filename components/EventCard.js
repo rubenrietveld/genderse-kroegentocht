@@ -14,7 +14,7 @@ export default function EventCard({ event }) {
       </p>
 
       {event.soldOut && (
-        <p className="text-red-600 font-bold">VOL = VOL</p>
+        <p className="text-red-600 font-bold">UITVERKOCHT</p>
       )}
 
       <Link

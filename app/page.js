@@ -1,9 +1,15 @@
 import events from "@/data/events.json"
 import EventCard from "@/components/EventCard"
+import Countdown from "@/components/Countdown";
 
 export default function Home() {
   return (
     <main>
+
+      {/* UITVERKOCHT BANNER */}
+      <div className="bg-red-600 text-white text-center py-3 font-bold tracking-wide">
+        🔥 DE GENDERSE BIERCANTUS IS UITVERKOCHT 🔥
+      </div>
 
       {/* HERO */}
       <section className="relative text-white">
@@ -17,10 +23,15 @@ export default function Home() {
             Genderse Kroegentocht
           </h1>
 
-          <p className="text-lg md:text-xl mb-8">
-            Gezellige evenementen in Genderen.
-            Biercantus, kroegentocht en samen proosten. 🍻
+          <p className="text-lg md:text-xl mb-6">
+            De Biercantus 2026 is volledig uitverkocht 🍻🔥  
+            Maar het feest barst los over:
           </p>
+
+          {/* COUNTDOWN */}
+          <div className="mb-10">
+            <Countdown />
+          </div>
 
           <div className="flex justify-center gap-4 flex-wrap">
             <a

@@ -26,6 +26,13 @@ export default async function EventPage({ params }) {
           {event.title}
         </h1>
 
+        {/* 👇 HIER toevoegen */}
+        {event.soldOut && (
+          <div className="bg-red-100 text-red-700 p-4 rounded-lg mb-6 font-semibold">
+            🔥 Dit event is volledig uitverkocht.
+          </div>
+        )}
+
         <div className="grid md:grid-cols-2 gap-6 mb-8 text-lg">
 
           <p>📅 {event.date}</p>
