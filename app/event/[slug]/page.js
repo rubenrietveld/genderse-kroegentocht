@@ -19,30 +19,43 @@ export default async function EventPage({ params }) {
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-4xl text-primary mb-6">
-        {event.title}
-      </h1>
 
-      <p className="mb-2">📅 {event.date}</p>
-      <p className="mb-2">⏰ {event.time}</p>
-      <p className="mb-2">📍 {event.location}</p>
-      <p className="mb-6 font-semibold">€{event.price} p.p.</p>
+      <div className="bg-white rounded-2xl shadow-lg p-8">
 
-      <p className="mb-8">{event.longDescription}</p>
+        <h1 className="text-4xl text-primary mb-6">
+          {event.title}
+        </h1>
 
-      {!event.soldOut ? (
-        <a
-          href={event.signupUrl}
-          target="_blank"
-          className="bg-accent text-white px-6 py-3 rounded-full hover:opacity-90 transition"
-        >
-          Aanmelden
-        </a>
-      ) : (
-        <p className="text-red-600 font-bold">
-          Dit event is uitverkocht.
+        <div className="grid md:grid-cols-2 gap-6 mb-8 text-lg">
+
+          <p>📅 {event.date}</p>
+          <p>⏰ {event.time}</p>
+          <p>📍 {event.location}</p>
+          <p className="font-semibold text-accent">
+            €{event.price} p.p.
+          </p>
+
+        </div>
+
+        <p className="mb-8 leading-relaxed">
+          {event.longDescription}
         </p>
-      )}
+
+        {!event.soldOut ? (
+          <a
+            href={event.signupUrl}
+            target="_blank"
+            className="bg-accent text-white px-8 py-4 rounded-full hover:opacity-90 transition inline-block"
+          >
+            Aanmelden
+          </a>
+        ) : (
+          <p className="text-red-600 font-bold text-lg">
+            Dit event is uitverkocht.
+          </p>
+        )}
+
+      </div>
     </main>
   )
 }

@@ -15,9 +15,26 @@ const bodyFont = Inter({
 })
 
 export const metadata = {
-  title: 'Genderse Kroegentocht',
-  description: 'Gezellige events in Genderen zoals kroegentocht en biercantus.',
-}
+  title: "Genderse Biercantus 2026",
+  description:
+    "De gezelligste Biercantus van Genderen. Zing, drink en beleef een onvergetelijke avond!",
+  openGraph: {
+    title: "Genderse Biercantus 2026 🍻",
+    description:
+      "Vrijdag 29 mei in het Dorpshuis Genderen. Vol = vol!",
+    url: "https://genderse-kroegentocht.vercel.app/",
+    siteName: "Genderse Biercantus",
+    images: [
+      {
+        url: "https://genderse-kroegentocht.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "nl_NL",
+    type: "website",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
