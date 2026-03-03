@@ -26,14 +26,22 @@ export default function Countdown() {
   const seconds = Math.floor((timeLeft / 1000) % 60);
 
   const TimeBlock = ({ value, label }) => (
-    <div className="bg-white text-primary rounded-xl px-6 py-4 min-w-[90px] shadow-lg">
-      <div className="text-3xl font-bold">{value}</div>
-      <div className="text-sm uppercase tracking-wide">{label}</div>
+    <div className="bg-white text-primary rounded-xl 
+      px-3 py-2 md:px-6 md:py-4 
+      min-w-[65px] md:min-w-[90px] 
+      shadow-lg"
+    >
+      <div className="text-xl md:text-3xl font-bold">
+        {value}
+      </div>
+      <div className="text-[10px] md:text-sm uppercase tracking-wide">
+        {label}
+      </div>
     </div>
   );
 
   return (
-    <div className="flex justify-center gap-4 flex-wrap">
+    <div className="flex justify-center md:gap-4 flex-nowrap">
       <TimeBlock value={days} label="Dagen" />
       <TimeBlock value={hours} label="Uur" />
       <TimeBlock value={minutes} label="Min" />
