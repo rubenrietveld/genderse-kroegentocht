@@ -22,7 +22,7 @@ export default function Contact() {
           <ContactForm />
 
           <div className="space-y-3 pt-4 border-t">
-            <p className="font-semibold">📱 Volg ons:</p>
+            <p className="font-semibold"> Volg ons:</p>
 
             <div className="flex gap-4 flex-wrap">
               <a
