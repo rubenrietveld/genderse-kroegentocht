@@ -11,7 +11,7 @@ export async function POST(request) {
       from: "Genderse Kroegentocht <info@gendersekroegentocht.nl>",
       to: "gendersekroegentocht@gmail.com",
       subject: `Nieuw contactformulier bericht van ${name}`,
-      reply_to: email,
+      reply_to: "gendersekroegentocht@gmail.com",
       html: `
         <h2>Nieuw bericht via de website</h2>
         <p><strong>Naam:</strong> ${name}</p>
@@ -26,6 +26,7 @@ export async function POST(request) {
       from: "Genderse Kroegentocht <info@gendersekroegentocht.nl>",
       to: email,
       subject: "We hebben je bericht ontvangen 🍻",
+      reply_to: "gendersekroegentocht@gail.com",
       html: `
         <h2>Bedankt voor je bericht, ${name}!</h2>
         <p>We hebben je bericht goed ontvangen en nemen zo snel mogelijk contact met je op.</p>
