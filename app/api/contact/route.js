@@ -8,7 +8,7 @@ export async function POST(request) {
 
     // Mail naar jullie
     await resend.emails.send({
-      from: "Genderse Kroegentocht <onboarding@resend.dev>",
+      from: "Genderse Kroegentocht <info@gendersekroegentocht.nl>",
       to: "gendersekroegentocht@gmail.com",
       subject: `Nieuw contactformulier bericht van ${name}`,
       reply_to: email,
@@ -23,7 +23,7 @@ export async function POST(request) {
 
     // Bevestiging naar verzender
     await resend.emails.send({
-      from: "Genderse Kroegentocht <onboarding@resend.dev>",
+      from: "Genderse Kroegentocht <info@gendersekroegentocht.nl>",
       to: email,
       subject: "We hebben je bericht ontvangen 🍻",
       html: `
