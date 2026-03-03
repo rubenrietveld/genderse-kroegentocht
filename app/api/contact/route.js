@@ -6,7 +6,8 @@ export async function POST(request) {
   try {
     const { name, email, message } = await request.json();
 
-    const data = await resend.emails.send({
+    // Mail naar jullie
+    await resend.emails.send({
       from: "Genderse Kroegentocht <onboarding@resend.dev>",
       to: "gendersekroegentocht@gmail.com",
       subject: `Nieuw contactformulier bericht van ${name}`,
@@ -17,6 +18,19 @@ export async function POST(request) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Bericht:</strong></p>
         <p>${message}</p>
+      `,
+    });
+
+    // Bevestiging naar verzender
+    await resend.emails.send({
+      from: "Genderse Kroegentocht <onboarding@resend.dev>",
+      to: email,
+      subject: "We hebben je bericht ontvangen 🍻",
+      html: `
+        <h2>Bedankt voor je bericht, ${name}!</h2>
+        <p>We hebben je bericht goed ontvangen en nemen zo snel mogelijk contact met je op.</p>
+        <p>Proost! 🍻</p>
+        <p><strong>Genderse Kroegentocht</strong></p>
       `,
     });
 
