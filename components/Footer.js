@@ -8,7 +8,7 @@ export default function Header() {
           Genderse Kroegentocht
         </Link>
 
-        <nav className="flex gap-6 text-sm">
+        <nav className="flex gap-6 items-center text-sm md:text-base whitespace-nowrap">
           <Link href="/">Home</Link>
           <Link href="/over-ons">Over ons</Link>
           <Link href="/contact">Contact</Link>

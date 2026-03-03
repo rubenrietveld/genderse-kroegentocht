@@ -2,13 +2,13 @@ import Link from "next/link"
 
 export default function Header() {
   return (
-    <header className="bg-primary text-white">
+    <header className="bg-primary/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-heading">
           Genderse Kroegentocht
         </Link>
 
-        <nav className="flex gap-6 text-sm">
+        <nav className="flex gap-6 items-center text-sm md:text-base whitespace-nowrap">
           <Link href="/">Home</Link>
           <Link href="/over-ons">Over ons</Link>
           <Link href="/contact">Contact</Link>
