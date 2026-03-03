@@ -24,7 +24,7 @@ export async function POST(request) {
     // Bevestiging naar verzender
     await resend.emails.send({
       from: "Genderse Kroegentocht <onboarding@resend.dev>",
-      to: email,
+      to: "gendersekroegentocht@gmail.com",
       subject: "We hebben je bericht ontvangen 🍻",
       reply_to: "gendersekroegentocht@gmail.com",
       html: `
