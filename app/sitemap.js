@@ -1,12 +1,23 @@
+import events from "@/data/events.json";
+
 export default function sitemap() {
-  return [
+  const baseUrl = "https://gendersekroegentocht.nl";
+
+  const staticPages = [
     {
-      url: "https://gendersekroegentocht.nl",
+      url: baseUrl,
       lastModified: new Date(),
     },
     {
-      url: "https://gendersekroegentocht.nl/events/biercantus-2026",
+      url: `${baseUrl}/over-ons`,
       lastModified: new Date(),
     },
   ];
+
+  const eventPages = events.map((event) => ({
+    url: `${baseUrl}/events/${event.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticPages, ...eventPages];
 }
