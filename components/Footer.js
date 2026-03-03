@@ -1,19 +1,37 @@
 import Link from "next/link"
 
-export default function Header() {
-  return (
-    <header className="bg-primary text-white">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-heading">
-          Genderse Kroegentocht
-        </Link>
+import { InstagramIcon, FacebookIcon } from "lucide-react"
 
-        <nav className="flex gap-6 items-center text-sm md:text-base whitespace-nowrap">
-          <Link href="/">Home</Link>
-          <Link href="/over-ons">Over ons</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
+export default function Footer() {
+  return (
+    <footer className="bg-primary text-white border-t border-white/10">
+      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+
+        <div className="flex gap-4">
+          <a
+            href="https://instagram.com/genderse_kroegentocht"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-full hover:bg-white/10 transition"
+          >
+            <InstagramIcon size={30} />
+          </a>
+
+          <a
+            href="https://facebook.com/profile.php?id=61578227144365"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-full hover:bg-white/10 transition"
+          >
+            <FacebookIcon size={30} />
+          </a>
+        </div>
+
+        <div className="text-xs md:text-sm">
+          © {new Date().getFullYear()} Genderse Kroegentocht
+        </div>
+
       </div>
-    </header>
+    </footer>
   )
 }
