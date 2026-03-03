@@ -41,7 +41,7 @@ export default function Countdown() {
   );
 
   return (
-    <div className="flex justify-center md:gap-4 flex-nowrap">
+    <div className="flex justify-center gap-4 md:gap-4">
       <TimeBlock value={days} label="Dagen" />
       <TimeBlock value={hours} label="Uur" />
       <TimeBlock value={minutes} label="Min" />
